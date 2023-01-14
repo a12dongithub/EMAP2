@@ -1,0 +1,9 @@
+.wrapper{
+    /* padding-top: 0px; */
+    /* padding-right: 0px; */
+    padding-bottom: 50px;
+    padding-left: 100px;
+  }
+.col-sm-8.col-sm-offset-2{
+    max-width: 900px;
+}
