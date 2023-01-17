@@ -14,35 +14,34 @@
           <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
         </a>
         <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
-          <i class="fas fa-chart-area fa-fw me-3"></i><span>Webiste traffic</span>
+          <i class="fas fa-chart-area fa-fw me-3"></i><span>Dashboard</span>
         </a>
         <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fas fa-lock fa-fw me-3"></i><span>Password</span></a
+          ><i class="fas fa-users fa-fw me-3"></i><span>Patients</span></a
+        >
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-lock fa-fw me-3"></i><span>Create </span></a
         >
         <a href="#" class="list-group-item list-group-item-action py-2 ripple"
           ><i class="fas fa-chart-line fa-fw me-3"></i><span>Analytics</span></a
         >
         <a href="#" class="list-group-item list-group-item-action py-2 ripple">
-          <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
+          <i class="fas fa-chart-pie fa-fw me-3"></i><span>Users</span>
         </a>
         <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Orders</span></a
+          ><i class="fas fa-chart-bar fa-fw me-3"></i><span>About</span></a
         >
         <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fas fa-globe fa-fw me-3"></i><span>International</span></a
+          ><i class="fas fa-globe fa-fw me-3"></i><span>Feedback</span></a
         >
         <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fas fa-building fa-fw me-3"></i><span>Partners</span></a
+          ><i class="fas fa-building fa-fw me-3"></i><span>Settings</span></a
         >
         <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fas fa-calendar fa-fw me-3"></i><span>Calendar</span></a
+          ><i class="fas fa-calendar fa-fw me-3"></i><span>Help</span></a
         >
-        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fas fa-users fa-fw me-3"></i><span>Users</span></a
-        >
-        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fas fa-money-bill fa-fw me-3"></i><span>Sales</span></a
-        >
+        
+        
       </div>
     </div>
   </nav>
@@ -220,6 +219,18 @@
 
 <!--Main layout-->
 <main style="margin-top: 58px;">
-  <div class="container pt-4"></div>
+
+<br>
+<br>
+<br>
+
+
+<div class="container pt-4">
+<%= line_chart({1=>1, 2=>2,3=>6, 4 =>3, 5=>4})%>
+<%= pie_chart Order.group(:status).count %>
+
+<%= column_chart Order.group_by_day_of_week(:created_at, format: "%a").count %> 
+</div>
+
 </main>
 <!--Main layout-->

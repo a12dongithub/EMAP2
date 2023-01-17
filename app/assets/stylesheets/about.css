@@ -39,3 +39,15 @@ body {
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
   }
+
+  .chart-1{
+    width: 400px;
+    margin-right: 0;
+  }
+  .c2{
+    width: 400px;
+    padding: 0;   
+    margin: 0;
+
+  }
+    
